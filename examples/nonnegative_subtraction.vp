@@ -1,0 +1,11 @@
+q0 1 q0 1 R // Keep scanning through tallies of the first number until you see the middle blank
+q0 0 q1 0 R // Middle blank found
+q1 1 q1 1 R // Go through all the tallies of the second number
+q1 0 q2 0 L // Found end of second number
+q2 0 qh 0 R // If the end of the last number is a blank, there's nothing left from the second number
+q2 1 q3 0 L // If the end of the last number is a tally, take out the last tally and replace with a blank
+q3 1 q3 1 L // Go through the remaining tallies of the second number until you see the middle blank
+q3 0 q4 0 L // Middle blank found
+q4 1 q4 1 L // Go through the tallies of the first number
+q4 0 q5 0 R // Found end of the first number (to the left)
+q5 1 q0 0 R // Take out first tally of the first number to the left (this subtracts 1); switch to q0 and repeat the process

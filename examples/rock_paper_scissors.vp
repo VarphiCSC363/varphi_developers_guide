@@ -1,0 +1,35 @@
+q0 1 qmaybeRock 0 R // This could be rock
+qmaybeRock 1 qmaybePaper 0 R // This is not rock, maybe paper
+qmaybeRock 0 qrock 0 R // This is definitely rock
+qmaybePaper 1 qscissors 0 R // This is definitely scissors
+qmaybePaper 0 qPaper 0 R // This is definitely paper
+
+qrock 0 qrockReadSecond 0 R // Found middle blank
+qpaper 0 qpaperReadSecond 0 R // Found middle blank
+qscissors 0 qscissorsReadSecond 0 R // Found middle blank
+
+qrockReadSecond 1 qrockMaybeRock 0 R // This could be rock vs rock
+qrockMaybeRock 1 qrockMaybePaper 0 R // This could be rock vs paper
+qrockMaybeRock 0 qtie 0 R // This is definiely rock vs rock, it's a tie
+qrockMaybePaper 1 qp1Wins 0 R // This is rock vs scissors, p1 wins
+qrockMaybePaper 0 qp2Wins 0 R // This is definitely rock vs paper, p2 wins
+
+
+qpaperReadSecond 1 qpaperMaybeRock 0 R // This could be paper vs rock
+qpaperMaybeRock 1 qpaperMaybePaper 0 R // This could be paper vs paper
+qpaperMaybeRock 0 qp1Wins 0 R // This is definiely paper vs rock, p1 wins
+qpaperMaybePaper 1 qp2Wins 0 R // This is paper vs scissors, p2 wins
+qpaperMaybePaper 0 qtie 0 R // This is definitely paper vs paper, it's a tie
+
+qscissorsReadSecond 1 qscissorsMaybeRock 0 R // This could be scissors vs rock
+qscissorsMaybeRock 1 qscissorsMaybePaper 0 R // This could be scissors vs paper
+qscissorsMaybeRock 0 qp2Wins 0 R // This is definiely scissors vs rock, p2 wins
+qscissorsMaybePaper 1 qtie 0 R // This is scissors vs scissors, it's a tie
+qscissorsMaybePaper 0 qp1Wins 0 R // This is definitely scissors vs paper, p1 wins
+
+qtie 0 qh 1 L // In the case it's a tie, output 1 tally
+qp1Wins 0 qp1Wins1 1 R // In the case that p1 won, output 2 tallies
+qp1Wins1 0 qh 1 L 
+qp2Wins 0 qp2Wins1 1 R // In the case that p3 won, output 3 tallies
+qp2Wins1 0 qp2Wins2 1 R
+qp2Wins2 0 qh 1 L

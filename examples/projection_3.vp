@@ -1,0 +1,4 @@
+q0 1 q0 0 R // Replace tallies of first number with blanks
+q0 0 q1 0 R
+q1 1 q1 0 R // Replace tallies of second number with blanks
+q1 0 qh 0 R
