@@ -11,7 +11,7 @@ The unary representation of a natural number takes the value of a number and rep
 
 The Varphi unary representation of a natural number takes the value of a number and represents it by that many tallies, **plus one**. For example, the natural number 6 is represented as seven tallies. We use this to be able to represent 0 with tallies, since 0 is given by one tally. 
 
-NOTE: This is just an input convention. It is not mandatory. Developers writing their prgrams may choose other input/output conventions. As an advanced example, you can represent signed numbers on the tape by defining the following convention:
+NOTE: This is just an input convention. It is not mandatory. Developers writing their prgrams may choose other input/output conventions, as long as the input convention requires that at least one tally is present on the input tape for any valid number (since this is a requirement for Varphi). As an advanced example, you can represent signed numbers on the tape by defining the following convention:
 
 * If the number is nonnegative, place one tally before the number, followed by a blank, followed by the absolute value of the number in the Varphi Unary Representation
 * Otherwise, place two tallies before the number, followed by a blank, followed by the absolute value of the number in the Varphi Unary Representation
@@ -226,3 +226,16 @@ Finally, one more feature of debugging Varphi programs in VS Code is that you ca
 Then, start debugging again. You should see that the first highlighted line is line 2, and that the Machine Variables section shows the machine just as it is about to finish execution
 
 ![alt text](./docsAssets/image-20.png)
+
+## Examples
+
+Please see the `examples` directory for more examples:
+
+* `add1.vp`: The addition-by-one example demonstrated in this guide. Input/output convention is the Varphi unary representation of numbers (so 0 is a valid input).
+* `add.vp`: Add any two inputs together. Input/output convention is the unary representation of numbers (so 0 is not a valid input).
+* `nonnegative_subtraction`: Given two numbers on the input tape, subtracts the second number from the first. Input/output convention is the unary representation of numbers (so 0 is not a valid input).
+* `mult2.vp`: Given a nonnegative input, multiplies it by 2. Input/output convention is the unary representation of numbers (so 0 is not a valid input).
+* `rock_paper_scissors.vp`: Given two inputs representing two players' moves (0 for rock, 1 for paper, 2 for scissors), returns who would win a match of Rock-Paper-Scissors (0 for tie, 1 for Player 1, 2 for Player 2). 
+* `coinflip.vp`: Given a **specific-input** (one singular tally), flip a coin and yield one tally if the result is heads, and two tallies if the result is tails. 
+
+**NOTE**: For one or more inputs, separate each input with a blank (0) on the input tape.
