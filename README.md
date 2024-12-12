@@ -9,7 +9,7 @@ The unary representation of a natural number takes the value of a number and rep
 
 ### The Varphi Unary Representation
 
-The Varphi unary representation of a natural number takes the value of a number and represents it by that many tallies, **plus one**. For example, the natural number 6 is represented as seven tallies. We use this to be able to represent 0 with tallies, since 0 is given by one tally. 
+The Varphi Unary Representation of a natural number takes the value of a number and represents it by that many tallies, **plus one**. For example, the natural number 6 is represented as seven tallies. We use this to be able to represent 0 with tallies, since 0 is given by one tally. 
 
 NOTE: This is just an input convention. It is not mandatory. Developers writing their prgrams may choose other input/output conventions, as long as the input convention requires that at least one tally is present on the input tape for any valid number (since this is a requirement for Varphi). As an advanced example, you can represent signed numbers on the tape by defining the following convention:
 
@@ -26,7 +26,7 @@ A *unary Turing machine* is a *theoretical* machine consisting of a head and a t
 
 ### Unary Turing Machine Example
 
-For example, let's come up with a Turing machine that adds 1 to any number. First, let's define how our input tape will look like. Since we cannot represent numbers by their decimal values (e.g., 6) on the tape, our input is assumed to be in the unary representation. So that we can represent zero with tallies, let's further assume the input is in the Varphi unary representation. Now imagine the input is "111" (three tallies), which represents the natural number 2. Assume the head is positioned at the first tally on the left (this is a convention that is always adopted, since the tape has infinite blanks extending on either side). We'll start with the following state of mind: 
+For example, let's come up with a Turing machine that adds 1 to any number. First, let's define how our input tape will look like. Since we cannot represent numbers by their decimal values (e.g., 6) on the tape, our input is assumed to be in the unary representation. So that we can represent zero with tallies, let's further assume the input is in the Varphi Unary Representation. Now imagine the input is "111" (three tallies), which represents the natural number 2. Assume the head is positioned at the first tally on the left (this is a convention that is always adopted, since the tape has infinite blanks extending on either side). We'll start with the following state of mind: 
 
 * If a tally is read at the current tape cell,
     * Keep the current state of mind as-is
@@ -231,7 +231,7 @@ Then, start debugging again. You should see that the first highlighted line is l
 
 Please see the `examples` directory for more examples:
 
-* `add1.vp`: The addition-by-one example demonstrated in this guide. Input/output convention is the Varphi unary representation of numbers (so 0 is a valid input).
+* `add1.vp`: The addition-by-one example demonstrated in this guide. Input/output convention is the Varphi Unary Representation of numbers (so 0 is a valid input).
 * `add.vp`: Add any two inputs together. Input/output convention is the unary representation of numbers (so 0 is not a valid input).
 * `nonnegative_subtraction`: Given two numbers on the input tape, subtracts the second number from the first. Input/output convention is the unary representation of numbers (so 0 is not a valid input).
 * `mult2.vp`: Given a nonnegative input, multiplies it by 2. Input/output convention is the unary representation of numbers (so 0 is not a valid input).
