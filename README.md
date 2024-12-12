@@ -132,13 +132,20 @@ Installation is simple. The steps are as follows
 ### Running Programs with the Varphi VS Code Extension
 
 1. Now, when you open your "add1.vp" program in Visual Studio Code, you should see the text being coloured.
+
     ![alt text](./docsAssets/image-2.png)
+
 2. When you press the "Run" button (slightly above the first line of your program), you will be prompted to input the path to the Varphi compiler. You should input the path that you copied from step 3 in the command-line installation steps. NOTE: This prompt only happens one time, and then the path is stored. To change it, change the "Varphi: Vpc Path" setting.
+
     ![alt text](./docsAssets/image-5.png)
+
 3. Then, you will be prompted to input the input tape. Input "111".
 4. Open the Command Palette (Ctrl + Shift + P on Windows, Shift + Command + P on Mac), and input "debug console", and select the following option
+
     ![alt text](./docsAssets/image-3.png)
+
 5. The Debug Console should then open, and you will see the output tape that the machine will produce
+
     ![alt text](./docsAssets/image-4.png)
 
 NOTE: The Varphi VS Code extension only supports interpreting your programs, and will not compile them to an executable. To compile your program to an exectuable, please follow Step 3 in [Compiling/Interpreting Programs With the Varphi Compiler](#compilinginterpreting-programs-with-the-varphi-compiler).
